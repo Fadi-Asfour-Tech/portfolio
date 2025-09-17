@@ -486,7 +486,7 @@ const XConfig = {
     clearcoat: 1,
     clearcoatRoughness: 0.15
   },
-  minSize: 0.5,
+  minSize: 0.3,
   maxSize: 1,
   size0: 1,
   gravity: 0.5,

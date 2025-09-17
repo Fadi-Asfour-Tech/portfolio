@@ -11,47 +11,63 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
-import Ballpit from "./background";
+import LiquidEther from "./LiquidEther";
 
 const Hero = () => {
-  return (
-    <section
-      // style={{
-      //   backgroundImage: "url('/gifBackground.gif')",
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   backgroundRepeat: "no-repeat",
-      // }}
-      id="home"
-    >
-      <div style={{position: 'relative', overflow: 'hidden', minHeight: '500px', maxHeight: '500px', width: '100%'}}>
-  <Ballpit
-    count={50}
-    gravity={0.1}
-    friction={0.9}
-    wallBounce={0.95}
-    followCursor={true}
-    ambientColor={16777215}
-    
-  />
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-      <div className="relative py-28 container max-w-7xl mx-auto px-4">
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+  return (
+    <section id="home" className="relative w-full min-h-[500px] ">
+      {/* Background */}
+      {/* <div className="absolute inset-0 z-0">
+        <Ballpit
+          count={isMobile ? 60 : 160}
+          gravity={0.12}
+          friction={0.985}
+          wallBounce={0.95}
+          followCursor={false}
+          ambientColor={0xffffff}
+          colors={[0x007aff, 0x1f2937, 0x6b7280]} // <-- new colors (red, cyan, warm yellow)
+          className="pointer-events" // if you want canvas to receive pointer
+        />
+      </div> */}
+      <div className="absolute inset-0 z-1">
+        <LiquidEther
+          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      </div>
+ <div className="z-2 relative flex justify-center pt-30  items-center">
+                <Image
+                  src="/fadi.jpg"
+                  alt="Profile Image"
+                  width={200}
+                  height={200}
+                  className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary !z-10"
+                />
+              </div>
+      <div className="relative py-28 container max-w-7xl mx-auto px-4 z-0">
+        <div className="relative !z-10 max-w-3xl mx-auto text-center">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               {...scaleIn}
               transition={{ delay: 0.05 }}
               className="flex flex-col items-center"
             >
-              <div>
-                <Image
-                  src="/fadi.jpg"
-                  alt="Profile Image"
-                  width={200}
-                  height={200}
-                  className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary"
-                />
-              </div>
+             
               <motion.h1
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
@@ -119,7 +135,6 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
