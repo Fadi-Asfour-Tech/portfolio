@@ -1,0 +1,10 @@
+{"tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "fieldClassName",
+        "itemsClassName",
+        "containerClassName",
+    ],
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 0
+}
