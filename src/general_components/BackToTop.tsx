@@ -32,7 +32,7 @@ const BackToTop: React.FC = () => {
         e.preventDefault();
         scrollToTop();
       }}
-      className={`fixed bottom-8 right-8 p-4 bg-blue-500 rounded-full text-white border-2 hover:border-blue-500 hover:bg-transparent transition-all duration-500 hover:text-blue-500 cursor-pointer 
+      className={`fixed bottom-8 right-8 p-4 bg-primary rounded-full text-white border-2 hover:border-primary hover:bg-transparent transition-all duration-500 hover:text-primary cursor-pointer 
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
       <FaArrowUp />

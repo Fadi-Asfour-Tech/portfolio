@@ -2,6 +2,12 @@
 import Button from "@/general_components/Button";
 import { DiTerminal } from "react-icons/di";
 import { FaCode, FaDownload } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { MdFlutterDash } from "react-icons/md";
+import { RiNextjsLine } from "react-icons/ri";
+import { SiFlutter } from "react-icons/si";
+
+import SoftSkillsSlide from "../components/SoftSkillsSlide";
 
 const About = () => {
   return (
@@ -49,16 +55,28 @@ const About = () => {
               </ul>
             </div>
             <div className="bg-white dark:bg-dark/50 rounded-2xl shadow-md p-6 hover:border-gray-500 hover:border-3 transition-all">
-              <FaCode className="h-8  w-8 text-primary mb-4" />
+              <SiFlutter className="h-8  w-8 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Flutter</h3>
               <ul className="text-secondary space-y-2">
-                <li>Flutter</li>
                 <li>State Management</li>
                 <li>Flavors</li>
+                <li>Device Sensors</li>
+              </ul>
+            </div>
+             <div className="bg-white dark:bg-dark/50 rounded-2xl shadow-md p-6 hover:border-gray-500 hover:border-3 transition-all">
+              <RiNextjsFill  className="h-8  w-8 text-primary mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Next.js</h3>
+              <ul className="text-secondary space-y-2">
+                <li>Redux</li>
+                <li>Shadcn</li>
+                <li>React Query</li>
               </ul>
             </div>
           </div>
         </section>
+      </div>
+      <div className="h-40 overflow-hidden">
+        <SoftSkillsSlide />
       </div>
     </section>
   );
