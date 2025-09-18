@@ -154,6 +154,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                placeholder="Your name..."
                 className="w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
@@ -169,6 +170,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder="Your email..."
                 className="w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
@@ -185,6 +187,7 @@ export default function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                placeholder="Your message..."
                 required
                 rows={4}
                 className="w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"

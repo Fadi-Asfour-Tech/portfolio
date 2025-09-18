@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/general_component/Button";
+import Button from "@/general_components/Button";
 import { DiTerminal } from "react-icons/di";
 import { FaCode, FaDownload } from "react-icons/fa";
 
@@ -17,22 +17,22 @@ const About = () => {
             always looking for new challenges and opportunities to learn and
             grow as an Engineer.
           </p>
-           <div className=" flex items-center justify-center m-1 line ">
-                  <Button
-                    classes="border-blue-500 bg-transparent stroke-blue-500 hover:text-white"
-                    title="Download Resume"
-                    icon={
-                      <FaDownload
-                        className="ml-1 inline-block text-sm font-bold"
-                        width={24}
-                        height={24}
-                      />
-                    }
-                    link=""
-                  />
-                </div>
+          <div className=" flex items-center justify-center m-1 line ">
+            <Button
+              classes="border-blue-500 bg-transparent stroke-blue-500 hover:text-white"
+              title="Download Resume"
+              icon={
+                <FaDownload
+                  className="ml-1 inline-block text-sm font-bold"
+                  width={24}
+                  height={24}
+                />
+              }
+              link=""
+            />
+          </div>
         </section>
-         
+
         <section className="">
           {/* mb-16 */}
           <h2 className="section-title">Skills</h2>

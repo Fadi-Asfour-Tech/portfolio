@@ -1,5 +1,4 @@
 "use client";
-import Button from "@/general_component/Button";
 import {
   fadeInDown,
   fadeInUp,
@@ -9,7 +8,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import LiquidEther from "./LiquidEther";
 
@@ -106,7 +105,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="absolute bottom-0 w-full z-2">
         <motion.div
           {...slideInRight}
