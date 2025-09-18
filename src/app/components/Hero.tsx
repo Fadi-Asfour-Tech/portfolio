@@ -1,23 +1,23 @@
 "use client";
+import Button from "@/general_component/Button";
 import {
   fadeInDown,
   fadeInUp,
   scaleIn,
-  slideInLeft,
   slideInRight,
 } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import LiquidEther from "./LiquidEther";
 
 const Hero = () => {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  // const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
-    <section id="home" className="relative w-full min-h-[500px] ">
+    <section id="home" className="relative w-full h-full  ">
       {/* Background */}
       {/* <div className="absolute inset-0 z-0">
         <Ballpit
@@ -33,7 +33,7 @@ const Hero = () => {
       </div> */}
       <div className="absolute inset-0 z-1">
         <LiquidEther
-          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          colors={["#6b7280", "#007aff", "#1f2937"]}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
@@ -50,15 +50,15 @@ const Hero = () => {
           autoRampDuration={0.6}
         />
       </div>
- <div className="z-2 relative flex justify-center pt-30  items-center">
-                <Image
-                  src="/fadi.jpg"
-                  alt="Profile Image"
-                  width={200}
-                  height={200}
-                  className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary !z-10"
-                />
-              </div>
+      <div className="z-2 relative flex justify-center pt-20  items-center">
+        <Image
+          src="/fadi.jpg"
+          alt="Profile Image"
+          width={200}
+          height={200}
+          className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary hover:scale-105 transition-transform"
+        />
+      </div>
       <div className="relative py-28 container max-w-7xl mx-auto px-4 z-0">
         <div className="relative !z-10 max-w-3xl mx-auto text-center">
           <div className="max-w-3xl mx-auto text-center">
@@ -67,7 +67,6 @@ const Hero = () => {
               transition={{ delay: 0.05 }}
               className="flex flex-col items-center"
             >
-             
               <motion.h1
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
@@ -85,56 +84,60 @@ const Hero = () => {
             >
               Software Engineer & Flutter Developer
             </motion.p>
-            <motion.div
-              {...slideInRight}
-              transition={{ delay: 0.7 }}
-              className="flex justify-center space-x-4 mb-8"
-            >
-              <Link
-                href="https://github.com/Fadi-Asfour"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
-              >
-                <FaGithub />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/fadi-asfour"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
-              >
-                <FaLinkedin />
-              </Link>
-              <Link
-                href="https://wa.me/+963936778940"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
-              >
-                <FaWhatsapp />
-              </Link>
-            </motion.div>
-            <motion.div
+
+            {/* <motion.div
               {...slideInLeft}
               transition={{ delay: 1 }}
               className="flex flex-col md:flex-row justify-center gap-4"
             >
               <Link
                 href="#projects"
-                className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/80 transition-colors"
+                className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-2xl hover:bg-primary/80 transition-colors"
               >
                 Projects
               </Link>
               <Link
                 href="#contact"
-                className="bg-gray-500 inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+                className="bg-gray-500 inline-block w-full md:w-auto text-white px-8 py-3 rounded-2xl hover:bg-gray-300 transition-colors"
               >
                 Contact us
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
+      </div>
+      
+      <div className="absolute bottom-0 w-full z-2">
+        <motion.div
+          {...slideInRight}
+          transition={{ delay: 0.7 }}
+          className="flex justify-center space-x-4 mb-8 "
+        >
+          <Link
+            href="https://github.com/Fadi-Asfour"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-primary dark:text-gray-400 dark:hover:text-primary hover:scale-115 transition"
+          >
+            <FaGithub />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/fadi-asfour"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-primary dark:text-gray-400 dark:hover:text-primary  hover:scale-115 transition"
+          >
+            <FaLinkedin />
+          </Link>
+          <Link
+            href="https://wa.me/+963936778940"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-gray-400 hover:text-primary dark:text-gray-400 dark:hover:text-primary  hover:scale-115 transition"
+          >
+            <FaWhatsapp />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

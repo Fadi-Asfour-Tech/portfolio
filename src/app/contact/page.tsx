@@ -135,7 +135,7 @@
 
 //         {/* Contact Form */}
 //         <motion.div
-//           className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+//           className="bg-white dark:bg-dark/50 p-6 rounded-2xl shadow-md"
 //           {...slideInRight}
 //         >
 //           <motion.form

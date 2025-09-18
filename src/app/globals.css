@@ -41,6 +41,11 @@ a {
     @apply text-3xl font-bold mb-8 text-center;
   }
 }
+@layer base {
+  body {
+    @apply select-none;
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -63,4 +68,41 @@ a {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.hover-btn {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  --tw-bg-opacity: 1;
+    background-color: rgb(0 122 255 / var(--tw-bg-opacity)); /* White color code */
+  z-index: -1;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all .4s ease-in-out;
+}
+
+.hover-bx {
+  left: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.hover-bx2 {
+  left: 25%;
+}
+
+.hover-bx3 {
+  left: 50%;
+}
+
+.hover-bx4 {
+  left: 75%;
+  border-radius: 0 7px 7px 0;
+}
+
+.about-btn:hover .hover-btn {
+  opacity: 1;
+  transform: scaleX(1);
 }
