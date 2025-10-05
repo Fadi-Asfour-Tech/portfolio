@@ -41,14 +41,14 @@ const Projects = () => {
             </div>
             <div className="flex gap-4 mt-2 ">
               <Link
-                href={project.githubLink}
+                href={project.projectLink}
                 target="_blank"
                 className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
               >
                 <FaGithub className="w-5 h-5" /> <span>GitHub</span>
               </Link>
               <Link
-                href={project.githubLink}
+                href={project.projectLink}
                 target="_blank"
                 className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
               >
