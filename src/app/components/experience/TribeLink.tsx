@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "@mui/icons-material";
+import { BiSolidZap } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 export default function TribeLink() {
@@ -41,13 +41,13 @@ export default function TribeLink() {
             {tasks?.map((item, index) => {
               return (
                 <div key={index} className="flex flex-row space-x-2">
-                  <ArrowRight className={"h-5 w-4 flex-none"} />
+                  <BiSolidZap className={"h-5 w-4 flex-none"} />
                   <span>{item.text}</span>
                 </div>
               );
             })}
             <div className="flex flex-row space-x-2">
-              <ArrowRight className={"h-5 w-4 flex-none"} />
+              <BiSolidZap className={"h-5 w-4 flex-none"} />
               <span className="font-bold text-heading">
                 Technologies used: Next.js, TypeScript, Tailwind CSS, React
                 Query, and Shadcn UI.

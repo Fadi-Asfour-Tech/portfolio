@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { BiSolidZap } from "react-icons/bi";
 
 export default function Blitz() {
   const SDE1Tasks = [
@@ -45,7 +45,7 @@ export default function Blitz() {
               {SDE1Tasks?.map((item, index) => {
                 return (
                   <div key={index} className="flex flex-row space-x-2">
-                    <FaArrowRight className={"h-5 w-4 flex-none"} />
+                    <BiSolidZap className={"h-5 w-4 flex-none"} />
                     <span>{item.text}</span>
                   </div>
                 );
@@ -72,13 +72,13 @@ export default function Blitz() {
             {InternTasks?.map((item, index) => {
               return (
                 <div key={index} className="flex flex-row space-x-2">
-                  <FaArrowRight className={"h-5 w-4 flex-none"} />
+                  <BiSolidZap className={"h-5 w-4 flex-none"} />
                   <span>{item.text}</span>
                 </div>
               );
             })}
             <div className="flex flex-row space-x-2">
-              <FaArrowRight className={"h-5 w-4 flex-none"} />
+              <BiSolidZap className={"h-5 w-4 flex-none"} />
               <span className="font-bold text-heading">
                 Technologies used: Flutter, Dart, Next.js, React.js, TypeScript.
               </span>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "@mui/icons-material";
+import { BiSolidZap } from "react-icons/bi";
 import { motion } from "framer-motion";
 
 export default function PW() {
@@ -38,7 +38,7 @@ export default function PW() {
             {tasks.map((item, index) => {
               return (
                 <div key={index} className="flex flex-row space-x-2">
-                  <ArrowRight className={"h-5 w-4 flex-none"} />
+                  <BiSolidZap className={"h-5 w-4 flex-none"} />
                   <span>{item.text}</span>
                 </div>
               );

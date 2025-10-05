@@ -81,7 +81,7 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              Software Engineer & Flutter Developer
+              Mobile & Web Software Engineer 
             </motion.p>
 
             {/* <motion.div
