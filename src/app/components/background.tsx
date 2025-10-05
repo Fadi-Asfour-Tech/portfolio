@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useRef, useEffect } from 'react';
 import {
   Clock,
@@ -219,11 +220,13 @@ class X {
 
   #onIntersection(entries: IntersectionObserverEntry[]) {
     this.#isAnimating = entries[0].isIntersecting;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     this.#isAnimating ? this.#startAnimation() : this.#stopAnimation();
   }
 
   #onVisibilityChange() {
     if (this.#isAnimating) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       document.hidden ? this.#stopAnimation() : this.#startAnimation();
     }
   }
@@ -429,6 +432,7 @@ class Y extends MeshPhysicalMaterial {
     thicknessPower: { value: 2 },
     thicknessScale: { value: 10 }
   };
+  defines: { [key: string]: any } = {}; // <-- Add this line
 
   constructor(params: any) {
     super(params);
