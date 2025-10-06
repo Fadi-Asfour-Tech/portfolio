@@ -16,10 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Devfolio | Portfolio Website using Next.js, Tailwind CSS, and Framer Motion",
+  title: "Fadi Asfour - Portfolio",
   description:
-    "Devfolio is a portfolio website for developers to showcase their projects and skills.",
+    "Fadi Asfour is a Software Engineer specializing in mobile and web development.",
 };
 
 export default function RootLayout({

@@ -1,15 +1,37 @@
+"use client";
 import { projects } from "@/contents/projects";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { FaCalendarAlt, FaFileVideo, FaGithub } from "react-icons/fa";
 
 const Projects = () => {
+  const refHeading = useRef(null);
+  const inViewHeading = useInView(refHeading);
+  const variants1 = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
   return (
     <section className=" container max-w-7xl px-4 mx-auto py-20" id="projects">
       {/*  mx-auto*/}
-      <h2 className="text-3xl font-bold mb-12 text-center">
+      {/* <h2 className="text-3xl font-bold mb-12 text-center">
         Important Projects
-      </h2>
+      </h2> */}
+      <motion.div
+        ref={refHeading}
+        variants={variants1}
+        initial="initial"
+        animate={inViewHeading ? "animate" : "initial"}
+        transition={{ duration: 0.6 }}
+        className="flex items-center gap-4 mb-12"
+      >
+        <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
+          Important Projects
+        </h3>
+        <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
         {projects.map((project) => (
           <article

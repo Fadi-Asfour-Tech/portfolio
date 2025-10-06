@@ -6,8 +6,8 @@ import {
   slideInLeft,
   slideInRight,
 } from "@/utils/animations";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 interface FormData {
@@ -56,18 +56,35 @@ export default function Contact() {
       [e.target.name]: e.target.value,
     }));
   };
-
+  const refHeading = useRef(null);
+  const inViewHeading = useInView(refHeading);
+  const variants1 = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
   return (
-    <section className="container max-w-7xl mx-auto py-12 " id="contact">
+    <section className="container max-w-7xl mx-auto py-10 " id="contact">
       {/* <motion.h1 className="text-4xl font-bold mb-8 text-center" {...fadeInUp}>
         Contact Me
       </motion.h1> */}
-
+      <motion.div
+        ref={refHeading}
+        variants={variants1}
+        initial="initial"
+        animate={inViewHeading ? "animate" : "initial"}
+        transition={{ duration: 0.6 }}
+        className="flex items-center gap-4 mb-12"
+      >
+        <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
+          Get in Touch
+        </h3>
+        <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Contact Information */}
         <motion.div className="space-y-8" {...slideInLeft}>
           <motion.div {...fadeInUp}>
-            <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+            {/* <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2> */}
             <p className="text-secondary">
               I&apos;m always open to discussing new projects, creative ideas,
               or opportunities to be part of your visions.
