@@ -63,7 +63,7 @@ export default function Contact() {
     animate: { opacity: 1, y: 0 },
   };
   return (
-    <section className="container max-w-7xl mx-auto py-10 " id="contact">
+    <section className=" py-10 " id="contact">
       {/* <motion.h1 className="text-4xl font-bold mb-8 text-center" {...fadeInUp}>
         Contact Me
       </motion.h1> */}
@@ -73,14 +73,14 @@ export default function Contact() {
         initial="initial"
         animate={inViewHeading ? "animate" : "initial"}
         transition={{ duration: 0.6 }}
-        className="flex items-center gap-4 mb-12"
+        className="flex items-center gap-4 mb-12 ps-6"
       >
         <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
           Get in Touch
         </h3>
         <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 container max-w-7xl mx-auto">
         {/* Contact Information */}
         <motion.div className="space-y-8" {...slideInLeft}>
           <motion.div {...fadeInUp}>

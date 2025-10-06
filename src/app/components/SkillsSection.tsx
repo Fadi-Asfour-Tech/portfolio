@@ -9,7 +9,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SoftSkillsSlide from "../components/SoftSkillsSlide";
 
- const SkillsSection = () => {
+const SkillsSection = () => {
   const refHeading = useRef(null);
   const inViewHeading = useInView(refHeading);
   const variants1 = {
@@ -17,23 +17,26 @@ import SoftSkillsSlide from "../components/SoftSkillsSlide";
     animate: { opacity: 1, y: 0 },
   };
   return (
-    <section id="skills">
+    <section id="skills" className=" pt-20">
+      <motion.div
+        ref={refHeading}
+        variants={variants1}
+        initial="initial"
+        animate={inViewHeading ? "animate" : "initial"}
+        transition={{ duration: 0.6 }}
+        className="flex items-center gap-4  ps-6"
+      >
+        <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
+          Skills
+        </h3>
+        <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
+      </motion.div>
+            <div className="h-40 overflow-hidden">
+        <SoftSkillsSlide />
+      </div>
       <div className="container max-w-7xl  mx-auto py-20">
         {/* mx-auto py-20 */}
         {/* <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1> */}
-        <motion.div
-          ref={refHeading}
-          variants={variants1}
-          initial="initial"
-          animate={inViewHeading ? "animate" : "initial"}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-4 mb-12"
-        >
-          <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
-            Skills
-          </h3>
-          <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
-        </motion.div>
 
         <section className="">
           {/* mb-16 */}
@@ -73,9 +76,7 @@ import SoftSkillsSlide from "../components/SoftSkillsSlide";
           </div>
         </section>
       </div>
-      <div className="h-40 overflow-hidden">
-        <SoftSkillsSlide />
-      </div>
+
     </section>
   );
 };

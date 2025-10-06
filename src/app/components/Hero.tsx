@@ -16,7 +16,7 @@ const Hero = () => {
   // const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
-    <section id="home" className="relative w-full h-full  ">
+    <section id="home" className="relative w-full   h-screen">
       {/* Background */}
       {/* <div className="absolute inset-0 z-0">
         <Ballpit
@@ -30,7 +30,7 @@ const Hero = () => {
           className="pointer-events" // if you want canvas to receive pointer
         />
       </div> */}
-      <div className="absolute inset-0 z-1">
+      <div className=" absolute inset-0 z-1">
         <LiquidEther
           colors={["#6b7280", "#007aff", "#1f2937"]}
           mouseForce={20}
@@ -49,16 +49,18 @@ const Hero = () => {
           autoRampDuration={0.6}
         />
       </div>
-      <div className="z-2 relative flex justify-center pt-20  items-center">
-        <Image
-          src="/fadi.jpg"
-          alt="Profile Image"
-          width={200}
-          height={200}
-          className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary hover:scale-105 transition-transform"
-        />
+      <div className="relative flex justify-center">
+        <div className="z-2 absolute flex justify-center pt-20 p-20  items-center">
+          <Image
+            src="/fadi.jpg"
+            alt="Profile Image"
+            width={200}
+            height={200}
+            className="rounded-full mb-4 w-50 h-50 object-cover ring-3 ring-primary hover:scale-105 transition-transform"
+          />
+        </div>
       </div>
-      <div className="relative py-28 container max-w-7xl mx-auto px-4 z-0">
+      <div className="relative py-32 container max-w-7xl mx-auto pt-82 px-4 z-0">
         <div className="relative !z-10 max-w-3xl mx-auto text-center">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div

@@ -3,27 +3,29 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import ExperienceWrapper from "./experience/ExperienceWrapper";
 
-interface Props {}
+// interface Props {}
 
-const Experience = (props: Props) => {
+const Experience = (
+  // props: Props
+) => {
   const refHeading = useRef(null);
-  const refContent = useRef(null);
+  // const refContent = useRef(null);
   const inViewHeading = useInView(refHeading);
-  const inViewContent = useInView(refContent, { once: true });
+  // const inViewContent = useInView(refContent, { once: true });
   const variants1 = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
   };
 
   return (
-    <section className="py-[80px] sm:px-6" id="experience">
+    <section className="py-[80px] sm:px-6 h-screen" id="experience">
       <motion.div
         ref={refHeading}
         variants={variants1}
         initial="initial"
         animate={inViewHeading ? "animate" : "initial"}
         transition={{ duration: 0.6 }}
-        className="flex items-center gap-4"
+        className="flex items-center gap-4  "
       >
         <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
           Experience

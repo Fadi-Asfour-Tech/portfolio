@@ -13,25 +13,26 @@ const About = () => {
     animate: { opacity: 1, y: 0 },
   };
   return (
-    <section id="about">
-      <div className="container max-w-7xl  mx-auto py-20">
+    <section id="about" className="h-screen pt-20">
+      <motion.div
+        ref={refHeading}
+        variants={variants1}
+        initial="initial"
+        animate={inViewHeading ? "animate" : "initial"}
+        transition={{ duration: 0.6 }}
+        className="flex items-center  ps-6  "
+      >
+        <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl ">
+          About Me
+        </h3>
+        <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
+      </motion.div>
+      <div className="container max-w-7xl  mx-auto py-2">
         {/* mx-auto py-20 */}
         {/* <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1> */}
-        <motion.div
-          ref={refHeading}
-          variants={variants1}
-          initial="initial"
-          animate={inViewHeading ? "animate" : "initial"}
-          transition={{ duration: 0.6 }}
-          className="flex items-center gap-4 mb-12"
-        >
-          <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
-            About Me
-          </h3>
-          <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
-        </motion.div>
+
         <section className="mb-16">
-          <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
+          <p className="text-lg font-bold text-secondary max-w-3xl mx-auto text-center">
             {/* I am a software engineer with a passion for Flutter and web
             development. I have a strong experience in building scalable and
             efficient applications using Flutter and web technologies. I am

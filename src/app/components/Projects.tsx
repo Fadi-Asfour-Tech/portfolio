@@ -4,7 +4,8 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { FaCalendarAlt, FaFileVideo, FaGithub } from "react-icons/fa";
+import { FaCalendarAlt, FaFileVideo } from "react-icons/fa";
+import { MdFileCopy } from "react-icons/md";
 
 const Projects = () => {
   const refHeading = useRef(null);
@@ -14,25 +15,22 @@ const Projects = () => {
     animate: { opacity: 1, y: 0 },
   };
   return (
-    <section className=" container max-w-7xl px-4 mx-auto py-20" id="projects">
-      {/*  mx-auto*/}
-      {/* <h2 className="text-3xl font-bold mb-12 text-center">
-        Important Projects
-      </h2> */}
+    <section className="  py-20" id="projects">
+
       <motion.div
         ref={refHeading}
         variants={variants1}
         initial="initial"
         animate={inViewHeading ? "animate" : "initial"}
         transition={{ duration: 0.6 }}
-        className="flex items-center gap-4 mb-12"
+        className="flex items-center gap-4 mb-12 ps-6"
       >
         <h3 className="text-3xl font-[800] text-textWhite sm:text-5xl">
           Important Projects
         </h3>
         <div className="mt-2 h-[4px] min-w-0 flex-grow bg-textWhite"></div>
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3  gap-8 container max-w-7xl px-4 mx-auto">
         {projects.map((project) => (
           <article
             key={project.title}
@@ -62,20 +60,25 @@ const Projects = () => {
               ))}
             </div>
             <div className="flex gap-4 mt-2 ">
-              <Link
-                href={project.projectLink}
-                target="_blank"
-                className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-              >
-                <FaGithub className="w-5 h-5" /> <span>GitHub</span>
-              </Link>
-              <Link
-                href={project.projectLink}
-                target="_blank"
-                className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-              >
-                <FaFileVideo className="w-5 h-5" /> <span>Video</span>
-              </Link>
+              {project.projectLink != "" && (
+                <Link
+                  href={project.projectLink}
+                  target="_blank"
+                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                >
+                  <MdFileCopy className="w-5 h-5" /> <span>Project Link</span>
+                </Link>
+              )}
+
+              {project.demoLink != "" && (
+                <Link
+                  href={project.demoLink}
+                  target="_blank"
+                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                >
+                  <FaFileVideo className="w-5 h-5" /> <span>Demo</span>
+                </Link>
+              )}
             </div>
             <div className="flex items-center text-sm text-gray-300 mb-4">
               <span className="flex items-center  text-secondary">
