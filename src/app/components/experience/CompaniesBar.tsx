@@ -1,13 +1,14 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
+import React from "react";
 
-interface Props {
-  props: any;
-}
+// interface Props {
+//   props: any;
+// }
 
 const CompaniesBar = (props: any) => {
-  const [barPosition, setBarPosition] = React.useState<Number>(0);
-  const [barAbovePosition, setBarAbovePosition] = React.useState<Number>(0);
+  const [barPosition, setBarPosition] = React.useState<number>(0);
+  const [barAbovePosition, setBarAbovePosition] = React.useState<number>(0);
   const [companyNameBackgroundColorGreen, setCompanyNameBackgroundColorGreen] =
     React.useState<boolean[]>([true, false, false, false, false, false, false]);
 
@@ -19,7 +20,7 @@ const CompaniesBar = (props: any) => {
           setBarAbovePosition(props.BarAbovePosition);
           props.setDescriptionJob(props.DescriptionJob);
           setCompanyNameBackgroundColorGreen(
-            props.CompanyNameBackgroundColorGreen,
+            props.CompanyNameBackgroundColorGreen
           );
         }}
         className={` w-32 flex-none rounded py-3
@@ -69,9 +70,9 @@ const CompaniesBar = (props: any) => {
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="TribeLink"
+            CompanyName="Peak Link"
             BarPosition={48}
-            DescriptionJob="TribeLink"
+            DescriptionJob="PeakLink"
             CompanyNameBackgroundColorGreen={[
               false,
               true,
