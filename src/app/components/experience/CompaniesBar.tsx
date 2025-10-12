@@ -52,7 +52,7 @@ const CompaniesBar = (props: any) => {
       {/* // ? Companies name as buttons */}
       <div className="order-1 flex flex-col space-y-1 px-4 md:px-8 lg:order-2 lg:px-0">
         <div className="flex flex-row lg:flex-col">
-          <CompanyButton
+          {/* <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
             CompanyName="Blitz"
             BarPosition={0}
@@ -67,7 +67,7 @@ const CompaniesBar = (props: any) => {
               false,
             ]}
             setDescriptionJob={props.setDescriptionJob}
-          />
+          /> */}
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
             CompanyName="Peak Link"
@@ -85,9 +85,9 @@ const CompaniesBar = (props: any) => {
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="Go Careers"
+            CompanyName="Blind Care Association"
             BarPosition={90}
-            DescriptionJob="GoCareers"
+            DescriptionJob="BlindCareAssociation"
             CompanyNameBackgroundColorGreen={[
               false,
               false,
@@ -98,7 +98,7 @@ const CompaniesBar = (props: any) => {
             ]}
             setDescriptionJob={props.setDescriptionJob}
           />
-          <CompanyButton
+          {/* <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={3}
             CompanyName="Epoch"
             BarPosition={143}
@@ -129,7 +129,7 @@ const CompaniesBar = (props: any) => {
               false,
             ]}
             setDescriptionJob={props.setDescriptionJob}
-          />
+          /> */}
         </div>
         <div className="block h-0.5 rounded bg-gray-500 lg:hidden">
           <motion.div

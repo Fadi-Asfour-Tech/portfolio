@@ -1,4 +1,5 @@
 import About from "./about/page";
+import ThreeDCard from "./certificates/Certificates";
 import Contact from "./components/ContactUs";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
@@ -13,10 +14,11 @@ export default function Home() {
       <About />
 
       <Projects />
-      <Experience/>
-      <SkillsSection/>
+      <Experience />
+      <SkillsSection />
       {/* Blogs */}
       {/* <Newsletter /> */}
+      <ThreeDCard />
       <Contact />
       <Footer />
     </>
