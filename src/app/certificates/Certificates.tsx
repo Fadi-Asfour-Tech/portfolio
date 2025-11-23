@@ -5,11 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { PiGitForkBold } from "react-icons/pi";
-import {
-  CardBody,
-  CardContainer,
-  CardItem,
-} from "../components/ui/3d-card";
+import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import { ButtonsCard } from "../components/ui/tailwindcss-buttons";
 
 const GITHUB_USERNAME = "lassiecoder";
@@ -142,16 +138,16 @@ const dummyData = [
     description:
       "The community-health-files package automates the setup and management  for open-source projects, providing a streamlined way to maintain project guidelines and policies.",
     image: "/projects/weather-app.png",
-    link: "https://github.com/lassiecoder/community-health-files",
+    link: "https://github.com/",
     repo: "community-health-files",
     projectType: "",
   },
   {
     title: "GitHub README",
     description:
-      "A dynamic GitHub profile showcasing JavaScript expertise, tech writing, speaking, and community contributions with engaging visuals, stats, and social links.",
+      "A dynamic GitHub profile showcasing JavaScript expertise, tech writing, speaking, and community contributions with engaging visuals, stats, and social links. A dynamic GitHub profile showcasing JavaScript expertise, tech writing, speaking, and community contributions with engaging visuals, stats, and social links.",
     image: "/projects/weather-app.png",
-    link: "https://github.com/lassiecoder/lassiecoder",
+    link: "https://github.com/",
     repo: "lassiecoder",
     projectType: "",
   },
@@ -160,7 +156,7 @@ const dummyData = [
     description:
       "Shoplane's GitHub repository, with 340 stars and 250 forks, is a significant player in open-source e-commerce, influencing the online retail sector's development.",
     image: "/projects/weather-app.png",
-    link: "https://github.com/lassiecoder/E-CommerceWebsite",
+    link: "https://github.com/",
     repo: "E-CommerceWebsite",
     projectType: "",
   },
@@ -169,7 +165,7 @@ const dummyData = [
     description:
       "A personalized command-line business card. This innovative tool allows you to showcase your professional profile, skills, and contact information in the terminal.",
     image: "/projects/weather-app.png",
-    link: "https://github.com/lassiecoder/npx-lassiecoder",
+    link: "https://github.com/",
     repo: "npx-lassiecoder",
     projectType: "",
   },
@@ -178,7 +174,7 @@ const dummyData = [
     description:
       "EduFund, India's leading investment app, helps parents save for their children's education, ensuring a brighter future amid rising education expenses.",
     image: "/projects/weather-app.png",
-    link: "https://play.google.com/store/apps/details?id=com.educationfund.edufund",
+    link: "https://github.com/",
     repo: "",
     projectType: "work-project",
   },
@@ -187,7 +183,7 @@ const dummyData = [
     description:
       "Torum's mobile app fosters a vibrant SocialFi ecosystem, connecting over 230,000 cryptocurrency enthusiasts since its 2018 inception.",
     image: "/projects/weather-app.png",
-    link: "https://play.google.com/store/apps/details?id=com.torum.app&amp;hl=en_IN&amp;gl=US",
+    link: "https://github.com/",
     repo: "",
     projectType: "work-project",
   },
@@ -196,7 +192,7 @@ const dummyData = [
     description:
       "The proof-of-concept app exhibits mutual funds with authentication, presenting a scrollable list of key fund information. Selecting a fund directs users to a detailed product page for additional insights.",
     image: "/projects/weather-app.png",
-    link: "https://github.com/lassiecoder/mutual-funding-app",
+    link: "https://github.com/",
     repo: "mutual-funding-app",
     projectType: "",
   },
@@ -205,7 +201,7 @@ const dummyData = [
     description:
       "The Adecco mobile app transforms job placement with accuracy, speed, and thorough evaluation. Daily linking over 700,000 individuals to top-tier global opportunities.",
     image: "/projects/weather-app.png",
-    link: "https://play.google.com/store/apps/details?id=com.adecco.app20&amp;hl=en_IN&amp;gl=US",
+    link: "https://github.com/",
     repo: "",
     projectType: "work-project",
   },
