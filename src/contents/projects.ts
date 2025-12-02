@@ -42,6 +42,10 @@ export const projects: Project[] = [
         demoLink: '',
         image: '/projects/weather-app.png',
       },
+  ];
+
+
+
       // {
       //   title: 'Chat Application',
       //   description: 'A real-time chat application using WebSocket technology.',
@@ -66,4 +70,3 @@ export const projects: Project[] = [
       //   demoLink: 'https://demo.com',
       //   image: '/projects/expense-tracker.webp',
       // }
-  ];

@@ -1,5 +1,5 @@
 import About from "./about/page";
-import ThreeDCard from "./certificates/Certificates";
+import ThreeDCard from "./certificates/Projects";
 import Contact from "./components/ContactUs";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";

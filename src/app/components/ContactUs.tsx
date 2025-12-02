@@ -172,7 +172,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Your Name..."
-                className="w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                className=" w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
 
@@ -206,8 +206,8 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Your Message..."
                 required
-                rows={4}
-                className="w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                // rows={4}
+                className=" max-h-32 h-32 min-h-32 w-full px-4 py-2 rounded-2xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             </motion.div>
 
